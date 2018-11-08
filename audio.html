@@ -2,13 +2,73 @@
 <html>
 <head>
   <title>audio test</title>
-  <script type="text/javascript">
-    document.onload = () => {
-      
-    }
-  </script>>
+  <link rel="stylesheet" href="css/piano.css">
+  <link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-<button id="note1">Play</button>
+  <div class="keyboard">
+    <ul class="octave">
+      <li><button data-key="C3">C3 <br>(a)</button>  <input type="checkbox"></li>
+      <li><button data-key="C3#">C3#<br>(w)</button>  <input type="checkbox"></li>
+      <li><button data-key="D3">D3<br>(s)</button>  <input type="checkbox"></li>
+      <li><button data-key="D3#">D3#<br>(e)</button>  <input type="checkbox"></li>
+      <li><button data-key="E3">E3<br>(d)</button>  <input type="checkbox"></li>
+      <li><button data-key="F3">F3<br>(f)</button>  <input type="checkbox"></li>
+      <li><button data-key="F3#">F3#<br>(t)</button>  <input type="checkbox"></li>
+      <li><button data-key="G3">G3<br>(g)</button>  <input type="checkbox"></li>
+      <li><button data-key="G3#">G3#<br>(y)</button>  <input type="checkbox"></li>
+      <li><button data-key="A3">A3<br>(h)</button>  <input type="checkbox"></li>
+      <li><button data-key="A3#">A3#<br>(u)</button>  <input type="checkbox"></li>
+      <li><button data-key="B3">B3<br>(j)</button>  <input type="checkbox"></li>
+    </ul>
+  </div>
+
+  <p style="margin: 50px 0px 0px 100px">
+    <button id="play-secret">Play [p]</button><br><br>
+    <button id="check-secret">Check [=]</button><br><br>
+    <button id="renew-secret">Renew [->]</button><br><br>
+    <!-- <span style="font-size: 36px">👌</span>
+    <span style="font-size: 36px">☝️</span> -->
+    <!-- <span id="status" class="animated infinite tada">☝</span> -->
+    <span id="status" class="">👌</span>
+
+<!--
+    Pts: <span id="points">0</span><br>
+    Secret: [<span id="current-secret">F3#</span>]<br>
+    Selected: [<span id="selected-key">F3#</span>]<br><br>
+
+    <button id="guess">Guess! [enter]</button>
+-->
+
+<!-- 
+    <div id="status" class="status">
+      WRONG!
+    </div>
+ -->
+  </p>
+
+<!--
+  <div class="status">
+    <span class="correct">Correct!</span>
+    <span class="wrong">Wrong. Try again!</span>
+  </div>
+ -->
+
+  <div class="audios">
+    <audio src="octave-3/piano-ff-028.wav" preload data-key="C3"></audio>
+    <audio src="octave-3/piano-ff-029.wav" preload data-key="C3#"></audio>
+    <audio src="octave-3/piano-ff-030.wav" preload data-key="D3"></audio>
+    <audio src="octave-3/piano-ff-031.wav" preload data-key="D3#"></audio>
+    <audio src="octave-3/piano-ff-032.wav" preload data-key="E3"></audio>
+    <audio src="octave-3/piano-ff-033.wav" preload data-key="F3"></audio>
+    <audio src="octave-3/piano-ff-034.wav" preload data-key="F3#"></audio>
+    <audio src="octave-3/piano-ff-035.wav" preload data-key="G3"></audio>
+    <audio src="octave-3/piano-ff-036.wav" preload data-key="G3#"></audio>
+    <audio src="octave-3/piano-ff-037.wav" preload data-key="A3"></audio>
+    <audio src="octave-3/piano-ff-038.wav" preload data-key="A3#"></audio>
+    <audio src="octave-3/piano-ff-039.wav" preload data-key="B3"></audio>
+  </div>
+
+  <script src="js/piano.js"></script>
 </body>
 </html>

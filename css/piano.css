@@ -1,0 +1,129 @@
+* {
+    font-family: Inconsolata;
+    font-weight: bolder;
+}
+
+
+ul.octave > li > input[type=checkbox] {
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    padding: 10px;
+    margin-top: 15px;
+}
+
+ul.octave > li {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    z-index: 1;
+    border-top: 3px solid transparent;
+}
+
+ul.octave > li.maybe-secret {
+    border-top: 3px solid red;
+}
+
+ul.octave > li > button {
+    display: block;
+    height: 150px;
+    width: 50px;
+    vertical-align: text-bottom;
+
+    background: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+ul.octave > li > button:active {
+    background: #eee;
+}
+
+ul.octave > li:nth-of-type(5) {
+    margin-right: 20px;
+}
+
+ul.octave > li:nth-of-type(2),
+ul.octave > li:nth-of-type(4),
+ul.octave > li:nth-of-type(7),
+ul.octave > li:nth-of-type(9),
+ul.octave > li:nth-of-type(11) {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+ul.octave > li:nth-of-type(2)  > button,
+ul.octave > li:nth-of-type(4)  > button,
+ul.octave > li:nth-of-type(7)  > button,
+ul.octave > li:nth-of-type(9)  > button,
+ul.octave > li:nth-of-type(11) > button {
+    height: 100px;
+    width: 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    margin-bottom: 50px;
+}
+
+ul.octave > li:nth-of-type(2)  > button:active,
+ul.octave > li:nth-of-type(4)  > button:active,
+ul.octave > li:nth-of-type(7)  > button:active,
+ul.octave > li:nth-of-type(9)  > button:active,
+ul.octave > li:nth-of-type(11) > button:active {
+    background: #333;
+}
+
+ul.octave > li:nth-of-type(2),
+ul.octave > li:nth-of-type(4),
+ul.octave > li:nth-of-type(7),
+ul.octave > li:nth-of-type(9),
+ul.octave > li:nth-of-type(11) {
+    z-index: 10;
+}
+
+/* Secret Button */
+#secret-btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: url("../img/play.png");
+    background-size: 30px 30px;
+    background-position: 35px center;
+    background-repeat: no-repeat;
+    border: 5px solid #ddd;
+    outline: none;
+}
+
+#secret-btn:active {
+    background-color: #f5f5f5;
+}
+
+.status { height: 50px; width: 200px; font-size: 20px; }
+.status > .wrong { color: #CC7552; }
+.status > .correct { color: #86BF88; }
+
+#status {
+    transform: translate(120px, 50%);
+    font-size: 20px;
+    display: inline-block;
+/*    animation-name: bounceooo;
+    animation-duration: .5s;
+*/}
+@keyframes bounceooo {
+    from {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.highlight {
+    outline: 8px solid rgba(0, 255, 0, .3) !important;
+}
